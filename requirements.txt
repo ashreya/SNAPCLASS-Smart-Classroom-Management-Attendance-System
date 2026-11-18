@@ -1,8 +1,9 @@
+streamlit
 # utilities
 numpy
 pandas
 
-#FACE RECOGNITION
+# FACE RECOGNITION
 scikit-learn
 dlib-bin
 
@@ -15,7 +16,6 @@ bcrypt
 segno
 pillow
 
-streamlit
 
 librosa
 resemblyzer
