@@ -9,6 +9,7 @@ from src.components.dialog_create_subject import create_subject_dialog
 from src.components.dialog_share_subject import share_subject_dialog
 from src.components.dialog_add_photos import add_photos_dialog
 from src.components.dialog_attendance_results import attendance_results_dialog
+from src.components.dialog_voice_attendance import voice_attendance_dialog
 from src.pipelines.face_pipeline import predict_attendance
 from src.database.config import supabase
 from datetime import datetime
@@ -151,7 +152,8 @@ def teacher_tab_take_attendance():
                         })
                     attendance_results_dialog(pd.DataFrame(results), attendance_to_logs)
     with c3:
-        st.button("Use Voice Attendance", type = "primary", width = "stretch", icon = ":material/mic:")
+        if st.button("Use Voice Attendance", type = "primary", width = "stretch", icon = ":material/mic:"):
+            voice_attendance_dialog(selected_subject_id)
 
 
 
